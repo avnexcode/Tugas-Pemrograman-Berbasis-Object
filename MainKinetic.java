@@ -32,7 +32,7 @@ public class MainKinetic {
     }
     
     public double Ek(double massa, double kecepatan) {        
-        return (massa * (kecepatan * kecepatan)) / 2;
+        return 0.5 * massa * Math.pow(kecepatan, 2);
     }
     
     public static void main(String[] args) {
