@@ -13,26 +13,26 @@ import java.util.*;
  */
 public class MainKinetic {
 
-    public double massa; double kecepatan; double ek;
+    public double m; double v;
     
-    public void setMassa(double massa) {
-        this.massa = massa;
+    public void setM(double m) {
+        this.m = m;
     }
     
-    public void setKecepatan(double kecepatan) {
-        this.kecepatan = kecepatan;
+    public void setV(double v) {
+        this.v = v;
     }
     
-    public double getMassa() {
-        return this.massa;
+    public double getM() {
+        return this.m;
     }
     
-    public double getKecepatan() {
-        return this.kecepatan;
+    public double getV() {
+        return this.v;
     }
     
-    public double Ek(double massa, double kecepatan) {        
-        return 0.5 * massa * Math.pow(kecepatan, 2);
+    public double Ek(double m, double v) {        
+        return 0.5 * m * Math.pow(v, 2);
     }
     
     public static void main(String[] args) {
@@ -40,18 +40,17 @@ public class MainKinetic {
         MainKinetic mainVar = new MainKinetic();
         
         System.out.print("Masukkan massa benda : ");
-        mainVar.setMassa(scanner.nextDouble());
+        mainVar.setM(scanner.nextDouble());
 
         System.out.print("Masukkan kecepatan benda : ");
-        mainVar.setKecepatan(scanner.nextDouble());
-        
-        double result = mainVar.Ek(mainVar.getMassa(), mainVar.getKecepatan());
+        mainVar.setV(scanner.nextDouble());
 
-        System.out.println("Massa benda adalah " + mainVar.getMassa());
-        System.out.println("Kecepatan benda adalah " + mainVar.getKecepatan());
+        double result = mainVar.Ek(mainVar.getM(), mainVar.getV());
+
+        System.out.println("Massa benda adalah " + mainVar.getM());
+        System.out.println("Kecepatan benda adalah " + mainVar.getV());
         System.out.println("Hasil perhitungan = " + result);
         
         scanner.close();
-        
     }
 }
