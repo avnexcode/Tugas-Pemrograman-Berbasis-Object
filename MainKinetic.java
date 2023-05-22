@@ -31,8 +31,8 @@ public class MainKinetic {
         return this.v;
     }
     
-    public double Ek(double m, double v) {        
-        return 0.5 * m * Math.pow(v, 2);
+    public double Ek() {        
+        return 0.5 * this.m * Math.pow(this.v, 2);
     }
     
     public static void main(String[] args) {
@@ -45,8 +45,8 @@ public class MainKinetic {
         System.out.print("Masukkan kecepatan benda : ");
         mainVar.setV(scanner.nextDouble());
 
-        double result = mainVar.Ek(mainVar.getM(), mainVar.getV());
-
+        double result = mainVar.Ek();
+        
         System.out.println("Massa benda adalah " + mainVar.getM());
         System.out.println("Kecepatan benda adalah " + mainVar.getV());
         System.out.println("Hasil perhitungan = " + result);
